@@ -4,7 +4,7 @@ class Box {
         this.box = createHTMLElement({
             type: type ?? "div",
             className: className ?? "box",
-            parent: parent ?? undefined,
+            parent: parent,
         });
         this.box.addEventListener("click", this.clicked.bind(this));
         return this;
@@ -13,7 +13,7 @@ class Box {
         const popUp = createHTMLElement({
             type: "div",
             id: "popup",
-            parent: "#timeline",
+            parent: "body",
         });
         const newContainer = createHTMLElement({
             type: "div",
@@ -28,7 +28,9 @@ class Box {
         });
         popUp.setAttribute("tabindex", 0);
         popUp.addEventListener("focusout", () => popUp.remove());
-        popUpCross.addEventListener("click", () => document.querySelector("#popup").remove());
+        popUpCross.addEventListener("click", () =>
+            document.querySelector("#popup").remove()
+        );
         popUp.focus();
         return this;
     }
@@ -47,12 +49,12 @@ class Box {
 }
 class Observation extends Box {
     constructor() {
-        super({ parent: "#observations-container" });
+        super({ parent: "#observations" });
     }
 }
 class Event extends Box {
     constructor() {
-        super({ parent: "#events-container" });
+        super({ parent: "#events" });
     }
 }
 

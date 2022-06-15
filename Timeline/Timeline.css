@@ -18,7 +18,8 @@ input {
     outline: 0;
 }
 div::-webkit-scrollbar {
-    height: 0.75em;
+    height: 0.8em;
+    width: 0.8em;
 }
 div::-webkit-scrollbar-track {
     border-radius: 5px;
@@ -28,6 +29,9 @@ div::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background-color: #faac40;
     border: solid black 1px;
+}
+div::-webkit-scrollbar-corner {
+    display: none;
 }
 
 /*Header*/
@@ -87,50 +91,43 @@ div::-webkit-scrollbar-thumb {
 
 /*Timeline*/
 #timeline {
-    display: flex;
     position: relative;
-    align-items: center;
-    justify-content: flex-end;
-    width: 100vw;
-    height: 100%;
+    min-width: 100vw;
+    height: calc(100vh - 80px);
     background: linear-gradient(#faac40, #457dd9);
-}
-#timeline-container {
     overflow: auto;
     white-space: nowrap;
-    display: flex;
-    flex-direction: column;
-    width: 90vw;
-    height: 50%;
 }
-#observations-container {
-    width: inherit;
-    height: inherit;
-    transform: rotate(180deg) translateY(-1px);
-    direction: rtl;
+#observations {
+    width: 100vw;
+    min-height: 50%;
 }
-#observations-container > div {
-    transform: rotate(180deg);
-    margin-top: 10px;
+#observations > .box {
 }
-#observations-container::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background-color: #457dd9;
-    border: solid black 1px;
+#events {
+    width: 100vw;
+    min-height: 50%;
 }
-#events-container {
-    width: inherit;
-    height: inherit;
-}
-#events-container > * {
-    margin-top: 10px;
+#add-box {
+    min-width: 3em;
+    width: 5vw;
+    aspect-ratio: 1;
+    position: absolute;
+    bottom: 2em;
+    right: 2em;
+    border: solid 2px #457dd9;
+    border-radius: 50%;
+    background-image: url("addBox.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 /*Popup*/
 #popup {
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: calc(50% + 30px);
     transform: translate(-50%, -50%);
     width: 80vw;
     height: 80vh;
@@ -147,13 +144,13 @@ div::-webkit-scrollbar-thumb {
     display: flex;
     position: relative;
     place-content: center;
-    margin-top: 10px;
+    margin-top: 0.5em;
 }
 #popup-cross {
-    width: 50px;
-    height: 50px;
+    width: 1.25em;
+    height: 1.25em;
     position: absolute;
-    right: 10px;
+    right: 0.5em;
     background-image: url("popUpCross.svg");
     background-position: center;
     background-size: contain;
@@ -164,12 +161,12 @@ div::-webkit-scrollbar-thumb {
 .box {
     display: inline-block;
     text-align: center;
-    margin-inline: 10px;
-    aspect-ratio: 1;
-    width: 175px;
+    margin: 0.5em;
+    height: 10em;
+    width: 10em;
     overflow: hidden;
     background-color: #b6e1da;
     outline: black solid 1px;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
