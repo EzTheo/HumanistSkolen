@@ -1,3 +1,5 @@
+const stylesheet = new CSSStyleSheet();
+document.adoptedStyleSheets.push(stylesheet);
 //Object Classes
 class Box {
     constructor({ type, className, parent } = {}) {
@@ -62,28 +64,25 @@ class Event extends Box {
 const Event1 = new Event().addTitle("Event 1");
 const Event2 = new Event().addTitle("Event 2");
 const Event4 = new Event().addTitle("Event 3");
-const Event3 = new Event().addTitle("Event 4");
-const Event5 = new Event().addTitle("Event 5");
-const Event6 = new Event().addTitle("Event 6");
-const Event7 = new Event().addTitle("Event 7");
-const Event8 = new Event().addTitle("Event 8");
-const Event9 = new Event().addTitle("Event 9");
-const Event10 = new Event().addTitle("Event 10");
-const Event11 = new Event().addTitle("Event 11");
-const Event12 = new Event().addTitle("Event 12");
 
 const Ob1 = new Observation().addTitle("Observasjon 1");
 const Ob2 = new Observation().addTitle("Observasjon 2");
-const Ob4 = new Observation().addTitle("Observasjon 3");
-const Ob3 = new Observation().addTitle("Observasjon 4");
-const Ob5 = new Observation().addTitle("Observasjon 5");
-const Ob6 = new Observation().addTitle("Observasjon 6");
-const Ob7 = new Observation().addTitle("Observasjon 7");
-const Ob8 = new Observation().addTitle("Observasjon 8");
-const Ob9 = new Observation().addTitle("Observasjon 9");
-const Ob10 = new Observation().addTitle("Observasjon 10");
-const Ob11 = new Observation().addTitle("Observasjon 11");
-const Ob12 = new Observation().addTitle("Observasjon 12");
+
+/* const observationsHeight = document
+    .querySelector("#observations")
+    .getBoundingClientRect().height;
+const eventsHeight = document
+    .querySelector("#events")
+    .getBoundingClientRect().height;
+console.log(observationsHeight);
+stylesheet.addRule(
+    "#observations",
+    `transform: translateY(calc(calc(50vh - 5em) - 100%));`
+);
+stylesheet.addRule(
+    "#events",
+    `transform: translateY(calc(calc(50vh - 5em) - calc(${observationsHeight}px + 10em)));`
+); */
 
 //Functions
 function createHTMLElement({ type, id, className, parent }) {
