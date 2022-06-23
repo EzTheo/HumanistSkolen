@@ -1,0 +1,191 @@
+/*HTML*/
+body {
+    margin: 0;
+    display: grid;
+    grid-template-rows: 5em calc(100vh - 5em);
+    font-family: "Roboto Mono", monospace;
+}
+input {
+    border: 0;
+    outline: 0;
+}
+section::-webkit-scrollbar {
+    height: 0.8em;
+    width: 0.8em;
+}
+section::-webkit-scrollbar-track {
+    border-radius: 5px;
+    border: rgba(0, 0, 0, 0.5) 1px solid;
+}
+section::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #faac40;
+    border: solid black 1px;
+}
+section::-webkit-scrollbar-corner {
+    display: none;
+}
+
+/*Header*/
+#header {
+    min-width: 100%;
+    height: 5em;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    background-color: #faac40;
+}
+#logo {
+    width: 80%;
+    height: inherit;
+    background-image: url("../../assets/humanistSkolenLogo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-size: contain;
+    padding-left: 1em;
+}
+#search {
+    min-width: 50%;
+    height: 40%;
+    background: #f4d06f;
+    place-self: center;
+    border-radius: 10px;
+    display: flex;
+    border: solid 2px #2176ff;
+}
+#search-bar {
+    place-self: right;
+    height: 100%;
+    width: 100%;
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    font-size: 125%;
+    text-indent: 10px;
+}
+#search-icon {
+    height: 100%;
+    aspect-ratio: 1;
+    border-right: 2px solid #2176ff;
+    place-self: left;
+    background-image: url("../../assets/searchIcon.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#view {
+    aspect-ratio: 1;
+    height: inherit;
+    background: #f4d06f;
+    place-self: center end;
+}
+
+/*Timeline*/
+#timeline {
+    display: flex;
+    flex-flow: column;
+    overflow: auto;
+    justify-content: center;
+    position: relative;
+    max-width: 100vw;
+    height: calc(100vh - 5em);
+}
+#timeline-container {
+    max-height: calc(100vh - 5em);
+}
+#observations {
+    display: inline-block;
+    white-space: nowrap;
+    min-width: 100vw;
+}
+#observations > .event {
+    vertical-align: bottom;
+}
+#to-dos {
+    display: inline-block;
+    white-space: nowrap;
+    min-width: 100vw;
+}
+#to-dos > .event {
+    vertical-align: top;
+}
+#add-button {
+    background: linear-gradient(#faac40, #2176ff) border-box;
+    border: solid 10px transparent;
+    -webkit-mask-image: url("/assets/addEventButton.pngght");
+    -webkit-mask-composite: clear;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+    border-radius: 50%;
+    width: 4vw;
+    min-width: 4em;
+    max-width: 7em;
+    aspect-ratio: 1;
+    position: absolute;
+    right: 2vw;
+    bottom: 2vw;
+}
+/*Popup*/
+#popup {
+    position: absolute;
+    left: 50%;
+    top: calc(50% + 1em);
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    height: 80vh;
+    background: #f4d06f;
+    opacity: 0.95;
+    text-align: center;
+    border-radius: 20px;
+    outline: black solid 1px;
+    padding-inline: 0.83em;
+}
+#popup-cross {
+    width: 2vw;
+    min-width: 2em;
+    aspect-ratio: 1;
+    position: absolute;
+    top: 0.83em;
+    right: 0.83em;
+    background-image: url("../../assets/popUpCross.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/*Classes*/
+.event {
+    display: inline-block;
+    text-align: center;
+    word-wrap: break-word;
+    white-space: initial;
+    padding-inline: 0.5em;
+    padding-block: 0.5rem;
+    margin: 0.5em;
+    overflow: hidden;
+    outline: black solid 1px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+.event-text {
+    text-align: left;
+}
+
+/*Media Queries*/
+@media screen and (max-width: 800px) {
+    #header {
+        grid-template-columns: 1fr;
+    }
+    #logo {
+        display: none;
+    }
+    #view {
+        display: none;
+    }
+    #search {
+        place-self: center;
+        min-width: 280px;
+    }
+}

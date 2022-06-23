@@ -5,8 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Timeline</title>
-        <link rel="stylesheet" href="Timeline.css" />
-        <script src="Timeline.js" defer></script>
+        <link rel="stylesheet" href="./css/Timeline.css" />
+        <script src="./js/Timeline.js" defer></script>
     </head>
     <body>
         <div id="header">
@@ -17,14 +17,12 @@
             </div>
             <div id="view"></div>
         </div>
-        <div id="timeline">
+        <section id="timeline">
             <div id="timeline-container">
                 <div id="observations"></div>
-                <div id="events"></div>
+                <div id="to-dos"></div>
             </div>
-        </div>
-        <div id="add-box"></div>
+        </section>
+            <div id="add-button" onclick="addEvent()"></div>
     </body>
 </html>
-<!--<label for="observations-container"> Observasjoner </label>-->
-<!--<label for="events-container"> Handlinger </label>-->
