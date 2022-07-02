@@ -111,21 +111,18 @@ section::-webkit-scrollbar-corner {
     vertical-align: top;
 }
 #add-button {
-    background: linear-gradient(#faac40, #2176ff) border-box;
-    border: solid 10px transparent;
-    -webkit-mask-image: url("/assets/addEventButton.pngght");
-    -webkit-mask-composite: clear;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-size: contain;
-    -webkit-mask-position: center;
+    background-image: url("../../assets/addEventButton.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     border-radius: 50%;
-    width: 4vw;
+    width: 5vw;
     min-width: 4em;
     max-width: 7em;
     aspect-ratio: 1;
     position: absolute;
-    right: 2vw;
-    bottom: 2vw;
+    right: 2vh;
+    bottom: 2vh;
 }
 /*Popup*/
 #popup {

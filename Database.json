@@ -1,0 +1,44 @@
+{
+    "students": [
+        {
+            "name": "Gunnar",
+            "events": [
+                {
+                    "title": "Mobbing",
+                    "text": "Gunnar har mobbet Arne de siste 2 ukene",
+                    "tags": [
+                        {
+                            "name": "Mobbing",
+                            "color": "Red"
+                        }
+                    ],
+                    "observations": [
+                        {
+                            "title": "Lo av Arne"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Arne",
+            "events": [
+                {
+                    "title": "Mobbing",
+                    "text": "Arne har blitt mobbet av gunnar",
+                    "tags": [
+                        {
+                            "name": "Mobbing",
+                            "color": "Red"
+                        }
+                    ],
+                    "observations": [
+                        {
+                            "title": "Arne har kommet for sent til timene"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

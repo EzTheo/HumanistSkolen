@@ -5,11 +5,6 @@ body {
     grid-template-rows: 5em calc(100vh - 5em);
     font-family: "Roboto Mono", monospace;
 }
-input {
-    border: 0;
-    outline: 0;
-}
-
 /*Header*/
 #header {
     min-width: 100%;
@@ -47,6 +42,8 @@ input {
     padding: 0;
     font-size: 125%;
     text-indent: 10px;
+    border: 0;
+    outline: 0;
 }
 #search-icon {
     height: 100%;
@@ -63,16 +60,4 @@ input {
     height: inherit;
     background: #f4d06f;
     place-self: center end;
-}
-
-/*Interface*/
-#interface {
-    display: flex;
-    min-width: 100%;
-    min-height: 100%;
-}
-#interface-text {
-    width: 100px;
-    height: 100px;
-    border: solid black 1px;
 }

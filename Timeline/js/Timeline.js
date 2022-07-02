@@ -76,7 +76,9 @@ class ToDo extends Event {
 }
 
 //Objects
-const ToDo1 = new ToDo().addTitle("event 1");
+const ToDo1 = new ToDo()
+    .addTitle("event 1")
+    .addText("HAllo jeg liker småbarn og spiser pølse");
 const ToDo2 = new ToDo().addTitle("event 2");
 const ToDo4 = new ToDo().addTitle("event 3");
 

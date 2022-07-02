@@ -17,8 +17,27 @@
             </div>
             <div id="view"></div>
         </div>
-        <div id="interface">
-            <section id="interface-text"></section>
-        </div>
+        <form>
+            <div>
+                <label for="search">Elev</label>
+                <input type="text" name="search">
+            </div>
+            <div id="typeDiv">
+                <input type="radio" name="event" value="Gjøremål" value="1" onclick="removeTest()">
+                <label for="Gjøremål">Gjøremål</label>
+                <input type="radio" name="event" value="Observasjon" value="2" onclick="test()">
+                <label for="Observasjon">Observasjon</label>
+
+            </div>
+            <div>
+                <label for="title">Title</label>
+                <input type="text" name="title">
+                <label for="content">Content</label>
+                <textarea type="text" name="content"></textarea>
+            </div>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+        </form>
     </body>
 </html>
